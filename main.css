@@ -1,0 +1,1972 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom css starts here... */
+html {
+	overflow-y: scroll; /*there's always vertical scroll*/
+	overflow-x: hidden;
+}
+/*getting rid of scrollbar in chrome. for firefox it's ::-moz-scrollbar */
+::-webkit-scrollbar {
+	display: none;
+}
+body {
+  background-color: white;
+}
+
+/* project css starts here... */
+
+	/*basic style (for small screen)*/
+.project-heading {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	letter-spacing: 0.7vw;
+	line-height: 7vw;
+	font-size: 5vw;
+	text-align: center;
+	padding: 3vw 10% 1vw 10%;
+}
+.project-body h1 {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	letter-spacing: 0.7vw;
+	line-height: 7vw;
+	font-size: 5vw;
+	text-align: center;
+	padding: 3vw 10% 1vw 10%;
+}
+.project-body h2, .project-body h3 {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	letter-spacing: 0.1vw;
+	line-height: 5vw;
+	font-size: 3vw;
+	text-align: center;
+	padding: 0 10%;
+}
+.project-body h2 {
+	letter-spacing: 0.15vw;
+	line-height: 7vw;
+	font-size: 4vw;
+	padding: 0 10% 3vw 10%;
+}
+.project-body figcaption, .project-body h4 {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-style: italic;
+	letter-spacing: 0.2vw;
+	line-height: 5vw;
+	font-size: 2.5vw;
+	text-align: justify;
+	text-align-last: center;
+	padding: 0;
+}
+.project-body h4 {
+	font-weight: 600;
+	padding-top: 1vw;
+}
+.project-body h5 {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-style: italic;
+	letter-spacing: 0.2vw;
+	line-height: 4vw;
+	font-size: 2vw;
+	text-align: center;
+	padding: 0 10%;
+}
+.project-body p {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	letter-spacing: 0.1vw;
+	line-height: 5vw;
+	font-size: 2.8vw;
+	text-align: justify;
+	text-align-last: center;
+	padding: 0 10%;
+}
+.project-body p a {
+	font-size: 3vw;
+}
+.project-body .parahigh a {
+	font-size: 3.5vw;
+}
+.project-body .parasmall {
+	font-size: 2.5vw;
+	letter-spacing: 0.25vw;
+	line-height: 4.5vw;
+}
+.project-body .leftpara {
+	text-align: left;
+	text-align-last: left;
+}
+.project-body .parab {
+	letter-spacing: 0.2vw;
+	font-family: 'Montserrat';
+	font-weight: 600;
+	line-height: 5.5vw;
+	font-size: 2.8vw;
+	text-align: justify;
+	text-align-last: center;
+}
+.project-body .parai {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-style: italic;
+	letter-spacing: 0.1vw;
+	line-height: 5vw;
+	font-size: 2.8vw;
+	text-align: justify;
+	text-align-last: center;
+}
+.project-body .parabig {
+	font-size: 3vw;
+	letter-spacing: 0.2vw;
+	line-height: 5vw;
+}
+.project-body .parawborder {
+	padding-bottom: 5vw;
+	border-bottom: 0.5vh solid #0B2F51;
+}
+.project-body .parablue {
+	color: #0B2F51;
+}
+.project-body figure {
+ 	height: auto;
+	width: 80%;
+	left: 9%;
+	margin: 2vh 0;
+	position: relative;
+	background-color: #f3f3f3;
+}
+.project-body figcaption .hidden-text {
+	display: none;
+}
+section {
+	margin: 0 2vw;
+}
+	/*bigger screen font*/
+@media only screen and (min-aspect-ratio:1/1){
+ .project-heading {
+		font-family: "Montserrat";
+		font-weight: 700;
+		letter-spacing: 0.3vw;
+		line-height: 3vw;
+		font-size: 2.25vw;
+		text-align: justify;
+		text-align-last: center;
+		padding: 3vw 10% 1vw 10%;
+	}
+	.project-body h1 {
+		font-family: "Montserrat";
+		font-weight: 700;
+		letter-spacing: 0.3vw;
+		line-height: 3vw;
+		font-size: 2.25vw;
+		text-align: justify;
+		text-align-last: center;
+		padding: 3vw 10% 1vw 10%;
+	}
+	.project-body h2, .project-body h3 {
+		font-family: 'Montserrat';
+		font-weight: 600;
+		letter-spacing: 0.15vw;
+		line-height: 2vw;
+		font-size: 1.3vw;
+		text-align: justify;
+		text-align-last: center;
+		padding: 0 10%;
+	}
+	.project-body h2 {
+		font-size: 1.5vw;
+		padding: 0 15% 2vw 15%;
+	}
+	.project-body figcaption, .project-body h4 {
+		font-family: 'Montserrat';
+		font-weight: 400;
+		font-style: italic;
+		letter-spacing: 0.1vw;
+		line-height: 1.5vw;
+		font-size: 0.9vw;
+		text-align: justify;
+		text-align-last: center;
+	}
+	.project-body h4 {
+		font-family: 'Montserrat';
+		font-weight: 600;
+		font-style: italic;
+		letter-spacing: 0.1vw;
+		line-height: 1.5vw;
+		font-size: 0.9vw;
+		padding-top: 1vw;
+		text-align: justify;
+		text-align-last: center;
+	}
+	.project-body h5 {
+		font-family: 'Montserrat';
+		font-weight: 400;
+		font-style: italic;
+		letter-spacing: 0.1vw;
+		line-height: 2vw;
+		font-size: 1.0vw;
+		text-align: justify;
+		text-align-last: center;
+		padding: 0 10%;
+	}
+	.project-body p {
+		font-family: 'Montserrat';
+		font-weight: 400;
+		letter-spacing: 0.085vw;
+		line-height: 2vw;
+		font-size: 1.1vw;
+		text-align: justify;
+		text-align-last: center;
+		padding: 0 15%;
+	}
+	.project-body p a {
+		font-size: 1.1vw;
+	}
+	.project-body .parahigh a {
+		font-size: 1.5vw;
+	}
+	.project-body .parasmall {
+		font-size: 0.9vw;
+		letter-spacing: 0.12vw;
+		line-height: 1.5vw;
+	}
+	.project-body .leftpara {
+		text-align: left;
+		text-align-last: left;
+	}
+	.project-body .parab {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		letter-spacing: 0.2vw;
+		line-height: 2.2vw;
+		font-size: 1.2vw;
+		text-align: justify;
+		text-align-last: center;
+	}
+	.project-body .parai {
+		font-family: 'Montserrat';
+		font-weight: 400;
+		font-style: italic;
+		letter-spacing: 0.15vw;
+		line-height: 2vw;
+		font-size: 1.1vw;
+		text-align: justify;
+		text-align-last: center;
+	}
+	.project-body .parabig {
+		font-size: 1.5vw;
+		letter-spacing: 0.18vw;
+		line-height: 2.5vw;
+	}
+	.project-body figure {
+	 	height: auto;
+		width: 50%;
+		left: 25%;
+		margin: 10vh 0;
+	}
+	.project-body .long-image {
+		width: 65%;
+		left: 17.5%;
+	}
+	.project-body .verticalimg {
+		width: 32%;
+		left: 34%;
+	}
+	.project-body .verticalimg2 {
+		width: 50%;
+		left: 25%;
+	}
+	.project-body figcaption .hidden-text  {
+		display: block;
+	}
+	.project-body figcaption img {
+		display: none;
+	}
+	.project-body figcaption a {
+		pointer-events: none;
+	}
+	section {
+		margin: 0 1vw;
+	}
+}
+/*common to all screens*/
+.project-body {
+	position: relative;
+	text-align: center;
+}
+.project-body .textimg {
+	position: static;/*for projects with image 'ears'*/
+	background-color: white;
+}
+.project-body .navimg {
+	background-color: white;/*for projects arrows*/
+}
+.project-body img {
+	height: auto;
+	width: 100%;
+}
+.project-body .invisible {
+	visibility: hidden;
+}
+.loader {
+	position: absolute;
+	left: 44.5%;
+	top: 40%;
+	border: 1vw solid #f3f3f3; /* Light grey */
+	border-top: 1vw solid black;
+	border-radius: 50%;
+	width: 5vw;
+	height: 5vw;
+	animation: spin 2s linear infinite;
+}
+@media only screen and (min-aspect-ratio:16/10){
+	.loader{
+		border: 0.5vw solid #f3f3f3; /* Light grey */
+		border-top: 0.5vw solid black;
+		width: 3vw;
+		height: 3vw;
+	}
+}
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+.project-body a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Montserrat';
+	font-weight: 700;
+}
+.hidden-1, .hidden-2 {
+	display: none;
+}
+.link-1 a, .link-2 a, .link-close a {
+	text-decoration: underline;
+	color: black;
+}
+.link-close h4 {
+
+}
+/*project css finish*/
+
+
+/*smaller screen nav*/
+.pc-header {
+  display: none !important;
+}
+.mobile-header {
+	display: block !important;
+}
+.mobile-header {
+	height: 6.16vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+}
+.mlogo {
+	position: fixed;
+	left: 0;
+	width: 13vw;
+	padding: 1.2vh 1vh 0;
+}
+.mlogo img{
+	height: 5vh;
+	width: auto;
+}
+.heading {
+	width: 50vw;
+	position: fixed;
+	left: 25vw;
+	top: 3vh;
+	text-align: center;
+	text-decoration: none;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: 1vw;
+	font-size: 4vw;
+	color: white;
+}
+.heading p {
+	text-align: center;
+}
+.dropdown {
+	position: fixed;
+	width: 25vw;
+	right: 0;
+}
+.dropdown-button {
+	position: fixed;
+	right: 0;
+	padding: 0.5vh;
+}
+.dropdown-button img {
+	width: 13vw;
+	height: auto;
+}
+.dropdown-content {
+	position: fixed;
+	top: 7.16vh;
+	right: 0;
+	width: 50vw;
+	display: none;
+	background-color:#E8ECED;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+.dropdown-content ul li {
+	padding: 2vh 0 2vh 5vh;
+	text-align: left;
+}
+.dropdown-content ul li a, .dropdown-content ul li p {
+  text-decoration: none;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: 0.5vw;
+	font-size: 4.5vw;
+  color: black;
+}
+
+/*bigger screen nav*/
+@media only screen and (min-aspect-ratio:16/10){
+	.mobile-header {
+		display: none !important;
+	}
+	.pc-header {
+	  display: block !important;
+	}
+	.pc-header {
+		height: 7.66vh;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 3;
+		text-align: center;
+	}
+	.pc-header .logo {
+	  display: inline-block;
+		float: left;
+	}
+	.logo img{
+		height: 6.66vh;
+		width: auto;
+	  padding: 1.4vh 3vh 0;
+	}
+	nav {
+	  display: inline-block;
+	  position: relative;
+		bottom: -1.5vw;
+	}
+	nav ul li {
+	  display: inline;
+	  padding: 0 2vw;
+	  border-right: 0.2vw solid white;
+	}
+	nav ul li:first-child {
+	  padding-left: 0;
+	}
+	nav ul li:last-child {
+	  border-right: 0;
+	}
+	.contact {
+		float: right;
+		display: inline-block;
+	}
+	.contact img {
+		height: 5.66vh;
+		width: auto;
+		padding: 1vh 3vh;
+	}
+	nav ul li a {
+	  text-decoration: none;
+		font-family: "Montserrat";
+		font-weight: 600;
+		letter-spacing: 0.3vw;
+		font-size: 1.25vw;
+		padding-top: 0.5vh;
+	  color: white;
+		transition: padding 0.5s;
+	}
+	nav ul li a:focus, nav ul li a:hover {
+		padding-bottom: 0.35vw;
+		border-bottom: 0.2vw solid white;
+		color: white;
+	}
+}
+/*bigger screen nav finish*/
+
+/*Home page stuff*/
+	.home-page {
+		margin: 0;
+		position: relative;
+		top: 7.56vh;
+		width: 100%;
+		height: auto;
+		padding: 0.5vh 0 0;
+		background-color: white;
+	}
+/*small screen home-page*/
+	.pc-home {
+		display: none;
+	}
+	.colm1, .colm2 {
+		margin-bottom: 1vh;
+	}
+	.m-home img {
+		width: 100%;
+		height: auto;
+	}
+	.mvisible .green {
+		visibility: hidden;/*show after it loads*/
+	}
+	.landing-1, .landing-2 {
+		margin-top: 1vh;
+		display: none;/*show after everything loads*/
+	}
+	.m-home .mhidden, .mvisible .yellow {
+		display: none;
+	}
+	.mhidden {
+		margin: 2vh 0;
+	}
+	.home-page h1, .home-page h2 {
+		text-align: center;
+		padding: 1vh 5vw 0;
+		font-family: "Montserrat";
+		font-weight: 600;
+		letter-spacing: 1vw;
+		font-size: 4vw;
+		line-height: 6vw;
+	}
+	.home-page .year {
+		padding: 0;
+		color: grey;
+		letter-spacing: 1vw;
+		font-size: 3.5vw;
+	}
+	.home-page h2 {
+		padding: 1vh 10vw 0;
+		letter-spacing: 1vw;
+		font-size: 3.5vw;
+		line-height: 5vw;
+	}
+	.home-page p {
+		text-align: center;
+		padding: 0 15vw;
+		font-family: "Montserrat";
+		font-weight: 400;
+		letter-spacing: 0.3vw;
+		font-size: 3vw;
+		line-height: 5vw;
+	}
+/*bigger screen home-page*/
+@media only screen and (min-aspect-ratio:16/10){
+	.pc-home {
+		display: block;
+	}
+	.m-home {
+		display: none;
+	}
+	.colh1, .colh2, .colh3 {
+		float: left;
+		width: 33%;
+		margin-right: 0.5%;
+		background-color: white;
+		padding: 0;
+	}
+	.colh3 {
+		margin-right: 0;
+	}
+	.home-page img {
+		width: 100%;
+		height: auto;
+	}
+	.colh2 .green {
+		padding-bottom: 1vw;
+		visibility: hidden;/*show after it loads*/
+		filter: contrast(50%);
+		transition: filter 0.5s;
+	}
+	.colh2 .yellow {
+		padding-bottom: 1vw;
+		display: none;/*show when green is clicked*/
+	}
+	.colh2 .hcontact img {
+		height: 13.4vw !important;/*align with side panels colh1 colh3*/
+	}
+	.colh2 .extra, .colh2 .xextra {
+		padding-bottom: 1vh;
+		filter: contrast(50%);
+		display: none;
+	}
+	.colh1 img {
+		position: relative;
+		right: 0;
+		visibility: hidden;/*show after everything loads*/
+		z-index: 2;
+	}
+	.colh3 img {
+		position: relative;
+		left: 0;
+		visibility: hidden;/*show after everything loads*/
+		z-index: 2;
+	}
+	.colh1 div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 33%;
+		display: none;
+		z-index: 1;
+	}
+	.colh3 div {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 33%;
+		display: none;
+		z-index: 1;
+	}
+	.colh1 div h1, .colh3 div h1 {
+		text-align: left;
+		padding: 5vh 6vw 1vh 4vw;
+		font-family: "Montserrat";
+		font-weight: 600;
+		letter-spacing: 0.3vw;
+		font-size: 1.8vw;
+		line-height: 2.4vw;
+	}
+	.colh3 div .year {
+		padding: 0 6vw 0 4vw;
+		color: grey;
+		letter-spacing: 0.2vw;
+		font-size: 1.5vw;
+	}
+	.colh1 div h2, .colh3 div h2 {
+		text-align: left;
+		padding: 5vh 6vw 0 4vw;
+		font-family: "Montserrat";
+		font-weight: 600;
+		letter-spacing: 0.25vw;
+		font-size: 1.2vw;
+		line-height: 1.8vw;
+	}
+	.colh1 div p, .colh3 div p {
+		text-align: left;
+		padding: 0 4vw;
+		font-family: "Montserrat";
+		font-weight: 400;
+		letter-spacing: 0.1vw;
+		font-size: 1vw;
+		line-height: 1.8vw;
+	}
+	.colh1, .colh3 {
+		z-index: 3;
+	}
+}/*end of pc-home*/
+
+/*Project page*/
+	.project-background {
+		margin: 0;
+		display: none;
+		height: auto;
+		width: 100%;
+		position: relative;
+		top: 7.56vh;
+		left: 0;
+		z-index: 0;
+	}
+	.project-page {
+		height: auto;
+		min-height: 60vh;
+		width: 76%;
+		position: absolute;
+		top: 0;
+		left: 12%;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		background-color: white;
+	}
+/*Image grid*/
+.image-grid {
+	margin: 0;
+	display: none;
+	position: relative;
+	top: 7.56vh;
+	left: 0;
+	z-index: 1;
+	height: auto;
+	width: 100%;
+	padding: 0.5vh 0;
+	overflow-y: hidden;
+	background-color: white;
+}
+@media only screen and (min-aspect-ratio:16/9){
+	/*position lower for big screens with 16:9 and more*/
+	.image-grid, .project-background, .home-page {
+		top: 8.4vh;
+	}
+	.pc-header {
+		border-top: 0;
+	}
+}
+@media only screen and (min-aspect-ratio:16/10) and (max-aspect-ratio:16/9){
+	/*position still lower for laptops with 16:10*/
+	.image-grid, .project-background, .home-page {
+		top: 16.4vh;
+	}
+	.pc-header {
+		border-top: 5vh solid #dee1d0;
+	}
+	footer {
+		position: fixed;
+		bottom: 0;
+		height: 2vh;
+		width: 100%;
+		z-index: 4;
+		border-bottom: 4vh solid #dee1d0;
+	}
+}
+
+.image-grid a {
+	display: block;
+	height: 100%; /* to make the full container a link */
+	width: 100%;
+	text-decoration: none;
+	text-align: left;
+}
+/*smaller screen font*/
+.image-grid a h1 {
+	font-family: "Montserrat";
+	font-weight: 700;
+	font-size: 4.5vw;
+	line-height: 6.6vw;
+	letter-spacing: 0.6vw;
+	padding: 3.6vw 3vw 0 3.6vw;
+	color: #ffffff;
+	position: absolute;
+	top: 5%;
+}
+.image-grid a p {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 3.6vw;
+	line-height: 5.5vw;
+	letter-spacing: 0.6vw;
+	padding: 1.5vw 3vw 3vw 3.6vw;
+	color: #cccccc;
+	position: absolute;
+	top: 50%;
+}
+/*bigger screen font*/
+@media only screen and (min-aspect-ratio:16/10){
+	.image-grid a h1 {
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: 1.5vw;
+		line-height: 2.2vw;
+		letter-spacing: 0.2vw;
+		padding: 1.2vw 1vw 1vw 1.2vw;
+		color: #ffffff;
+		position: absolute;
+		top: 5%;
+	}
+	.image-grid a p {
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: 1vw;
+		line-height: 1.5vw;
+		letter-spacing: 0.15vw;
+		padding: 1.2vw 1vw 1vw 1.2vw;
+		color: #cccccc;
+		position: absolute;
+		top: 50%;
+	}
+}
+
+.image-grid figure {
+    width: 100%;
+		position: relative;
+		overflow: hidden;
+		padding: 0;
+}
+.image-grid figure img {
+		height: auto;
+		width: 100%;
+}
+.image-grid figure .visible {
+		display: none;
+		height: 100%;
+		width: 100%;
+    position: absolute;
+		z-index: 1;
+}
+.image-grid figure .hidden {
+    height: 100%;
+		width: 100%;
+		position: absolute;
+    z-index: 0;
+    top: 0;
+}
+.image-grid figure .hidden a {
+		display: none;
+}
+/*Illustration page*/
+
+/*small screen*/
+.col1, .col2, .col3 {
+	width: 100%;
+	height: 136.5vw;/*triple of laptop*/
+}
+.col1, .col2 {
+	margin-bottom: 1vw;
+}
+
+
+/*bigger screen*/
+@media only screen and (min-aspect-ratio:16/10){
+    .col1, .col2, .col3 {
+	   	float: left;
+     	height: 45.5vw;/*got value with trial and error*/
+			margin-bottom: 0;
+    }
+    .col1 {
+      width: 34.5vw;
+      margin-right: 0.5vw;
+    }
+    .col2 {
+      width: 31vw;
+      margin-right: 0.5vw;
+    }
+    .col3 {
+      width: 33.5vw;
+    }
+}
+/*bigger screen*/
+
+.subcol11, .subcol12, .subcol22, .subcol23, .subcol31, .subcol32 {
+	float: left;
+}
+.subcol11 {
+    height: 100%;
+    width: 38%;
+    margin-right: 1.5%;
+		margin-bottom: 0;
+}
+.subcol12 {
+    height: 100%;
+    width: 60.5%;
+}
+.subcol21 {
+    height: 67%;
+    width: 100%;
+		margin-bottom: 1.3%;
+}
+.subcol22 {
+    height: 31.7%;
+    width: 48.5%;
+    margin-right: 1.5%;
+}
+.subcol23 {
+    height: 31.7%;
+    width: 50%;
+}
+.subcol31 {
+		height: 67.1%;
+    width: 59.7%;
+		margin: 0 1.5% 1.2% 0;
+}
+.subcol32 {
+		height: 67.2%;
+    width: 38.8%;
+		margin-bottom: 0;
+}
+.subcol33 {
+		height: 32%;
+    width: 100%;
+}
+
+.nineties {
+	height: 35%;
+	margin-bottom: 3%;/*w.r.t. subcol11 it amounts to 0.4vw*/
+}
+.nineties_visible {
+  top: 0;
+	transition: top 0.25s ease-in 0.1s;
+}
+.nineties img {
+	height: 100% !important;	/*unknown adjustmenst*/
+}
+.nineties:hover .nineties_visible {
+	top: 100%;
+}
+.nineties_hidden {
+	background-color: #1a1619;
+}
+
+.wiw {
+	height: 64.2%;/*unknown adjustment*/
+	margin-bottom: 0;
+}
+.wiw_visible {
+	bottom: 0;
+	transition: bottom 0.25s ease-in 0.1s;
+}
+.wiw img {
+	height: 100% !important;	/*unknown adjustmenst*/
+}
+.wiw:hover .wiw_visible {
+	bottom: 100%;
+}
+.wiw_hidden {
+	background-color: #c0e6f0;
+}
+.wiw_hidden a h1 {
+	color: #2c2c2e;
+}
+.wiw_hidden a p {
+	color: #4c4c4e;
+}
+
+.spices {
+	height: 100%;
+	margin-bottom: 0;
+}
+.spices_visible {
+	left: 0;
+	transition: left 0.25s ease-in 0.1s;
+}
+.spices img {
+	height: 100% !important;	/*unknown adjustmenst*/
+}
+.spices:hover .spices_visible {
+	left: 100%;
+}
+.spices_hidden {
+	background-color: #f1ab1f;
+}
+.spices_hidden a h1 {
+	color: #2c2c2e;
+}
+.spices_hidden a p {
+	color: #4c4c4e;
+}
+
+.bww {
+	height: 51.3%;/*got value with trial and error*/
+	margin-bottom: 1.3%;
+}
+.bww_visible {
+	top: 0;
+	transition: top 0.25s ease-in 0.1s;
+}
+.bww:hover .bww_visible {
+	top: 100%;
+}
+.bww_hidden {
+	background-color: #060809;
+}
+
+.frog {
+	height: 47.5%;/*got value with trial and error*/
+}
+.frog img {
+	height: 100% !important;	/*unknown adjustmenst*/
+}
+.frog_visible {
+	bottom: 0;
+	transition: bottom 0.25s ease-in 0.1s;
+}
+.frog:hover .frog_visible {
+	bottom: 100%;
+}
+.frog_hidden {
+	background-color: #3e976a;
+}
+
+.stones {
+	height: 102%;/*got value with trial and error*/
+}
+.stones img {
+	height: 102% !important;	/*unknown adjustmenst*/
+}
+.stones_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.stones:hover .stones_visible {
+	right: 100%;
+}
+.stones_hidden {
+	background-color: #435da7;
+}
+
+.journals {
+	height: 102%;/*adjustment*/
+}
+.journals img {
+	height: 102% !important;	/*unknown adjustmenst*/
+}
+.journals_visible {
+	left: 0;
+	transition: left 0.25s ease-in 0.1s;
+}
+.journals:hover .journals_visible {
+	left: 100%;
+}
+.journals_hidden {
+	background-color: #67715a;
+}
+
+.birds {
+	height: 100%;
+}
+.birds img {
+	height: 100% !important;	/*unknown adjustmenst*/
+}
+.birds_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.birds:hover .birds_visible {
+	right: 100%;
+}
+.birds_hidden {
+	background-color: #5f3e2b;
+}
+
+.ip {
+	height: 61.8%;
+	margin-bottom: 3%;/*w.r.t. subcol32 it amounts to 0.4vw*/
+}
+.ip_visible {
+	top: 0;
+	transition: top 0.25s ease-in 0.1s;
+}
+.ip:hover .ip_visible {
+	top: 100%;
+}
+.ip_hidden {
+	background-color: #c0a99d;
+}
+.ip_hidden a h1 {
+	color: #2c2c2e;
+}
+.ip_hidden a p {
+	color: #4c4c4e;
+}
+
+.ec {
+	height: 36.8%;
+}
+.ec_visible {
+	bottom: 0;
+	transition: bottom 0.25s ease-in 0.1s;
+}
+.ec:hover .ec_visible {
+	bottom: 101%;
+}
+.ec_hidden {
+	background-color: #f2c778;
+}
+.ec_hidden a h1 {
+	color: #2c2c2e;
+}
+.ec_hidden a p {
+	color: #4c4c4e;
+}
+
+.walls {
+	height: 100%;
+}
+.walls img {
+	height: 100% !important;	/*unknown adjustment*/
+}
+.walls_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.walls:hover .walls_visible {
+	right: 100%;
+}
+.walls_hidden {
+	background-color: #18203c;
+}
+
+
+/*Print page*/
+
+	/*small screen*/
+.colp1, .colp2, .colp3 {
+	width: 100%;
+	height: 136.5vw;/*triple of laptop*/
+}
+.colp1, .colp2 {
+	margin-bottom: 1vw;
+}
+
+	/*bigger screen*/
+@media only screen and (min-aspect-ratio:16/10){
+    .colp1, .colp2, .colp3 {
+	   	float: left;
+     	height: 45.5vw;/*got value with trial and error*/
+			margin-bottom: 0;
+    }
+    .colp1 {
+      width: 33vw;
+      margin-right: 0.5vw;
+    }
+    .colp2 {
+      width: 33vw;
+      margin-right: 0.5vw;
+    }
+    .colp3 {
+      width: 33vw;
+    }
+}
+/*bigger screen*/
+
+.subcolp11, .subcolp12, .subcolp14, .subcolp15, .subcolp22, .subcolp23, .subcolp31, .subcolp32 {
+	float: left;
+}
+.subcolp13, .subcolp33 {
+	clear: left;
+}
+
+.subcolp11 {
+	height: 34.5%;
+	width: 40%;
+	margin-right: 1.5%;
+}
+.subcolp12 {
+	height: 34.5%;
+	width: 58.5%;
+	margin-bottom: 1.2%;
+}
+.subcolp13 {
+	height: 30.9%;
+	width: 100%;
+	margin-bottom: 1.2%;
+}
+.subcolp14 {
+	height: 32.48%;
+	width: 52%;
+	margin-right: 1.5%;
+}
+.subcolp15 {
+	height: 32.48%;
+	width: 46.5%;
+}
+.subcolp21 {
+	height: 40.4%;
+	width: 100%;
+	margin-bottom: 1.2%;
+}
+.subcolp22 {
+	height: 58.6%;
+	width: 50.5%;
+	margin-right: 1.5%;
+}
+.subcolp23 {
+	height: 58.6%;
+	width: 48%;
+}
+.subcolp31 {
+	height: 69.2%;
+	width: 58.5%;
+	margin-right: 1.5%;
+}
+.subcolp32 {
+	height: 69.2%;
+	width: 40%;
+	margin-bottom: 1.2%;
+}
+.subcolp33 {
+	height: 29.8%;/*more than 100%, instead of 29.6*/
+	width: 100%;
+}
+
+.birdbook {
+	height: 100%;
+}
+.birdbook_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.birdbook:hover .birdbook_visible {
+	right: 100%;
+}
+.birdbook_hidden {
+	background-color: #d1b252;
+}
+.birdbook_hidden a h1 {
+	color: #2c2c2e;
+}
+.birdbook_hidden a p {
+	color: #4c4c4e;
+}
+
+.gamemanual {
+	height: 100%;
+}
+.gamemanual_visible {
+	left: 0;
+	transition: left 0.25s ease-in 0.1s;
+}
+.gamemanual:hover .gamemanual_visible {
+	left: 100%;
+}
+.gamemanual_hidden {
+	background-color: #070909;
+}
+
+.stamp {
+	height: 100%;
+}
+.stamp_visible {
+	top: 0;
+	transition: top 0.25s ease-in 0.1s;
+}
+.stamp:hover .stamp_visible {
+	top: 100%;
+}
+.stamp_hidden {
+	background-color: #422f7c;
+}
+
+.gallery {
+	height: 100%;
+}
+.gallery_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.gallery:hover .gallery_visible {
+	right: 100%;
+}
+.gallery_hidden {
+	background-color: #94211f;
+}
+
+.children {
+	height: 100%;
+}
+.children_visible {
+	left: 0;
+	transition: left 0.25s ease-in 0.1s;
+}
+.children:hover .children_visible {
+	left: 100%;
+}
+.children_hidden {
+	background-color: #c4c6dd;
+}
+.children_hidden a h1 {
+	color: #2c2c2e;
+}
+.children_hidden a p {
+	color: #4c4c4e;
+}
+
+.remedies {
+	height: 100%;
+}
+.remedies_visible {
+	bottom: 0;
+	transition: bottom 0.25s ease-in 0.1s;
+}
+.remedies:hover .remedies_visible {
+	bottom: 101%;/*adjustment*/
+}
+.remedies_hidden {
+	background-color: #5f0a10;
+}
+
+.ambedkar {
+	height: 100%;
+}
+.ambedkar_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.ambedkar:hover .ambedkar_visible {
+	right: 100%;
+}
+.ambedkar_hidden {
+	background-color: #0e3e35;
+}
+
+.access {
+	height: 47.75%;
+	margin-bottom: 2%;
+}
+.access_visible {
+	left: 0;
+	transition: left 0.25s ease-in 0.1s;
+}
+.access:hover .access_visible {
+	left: 100%;
+}
+.access_hidden {
+	background-color: #584190;
+}
+
+.grad {
+	height: 51%;/*more than 100%, instead of 50.25*/
+}
+.grad_visible {
+	left: 0;
+	transition: left 0.25s ease-in 0.1s;
+}
+.grad:hover .grad_visible {
+	left: 100%;
+}
+.grad_hidden {
+	background-color: #df2227;
+}
+
+.place {
+	height: 100%;
+}
+.place_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.place:hover .place_visible {
+	right: 100%;
+}
+.place_hidden {
+	background-color: #7ecaa9;
+}
+.place_hidden a h1 {
+	color: #2c2c2e;
+}
+.place_hidden a p {
+	color: #4c4c4e;
+}
+
+.inprogress {
+	height: 34.5%;
+	margin-bottom: 2.5%;
+}
+.inprogress_visible {
+	left: 0;
+	transition: left 0.25s ease-in 0.1s;
+}
+.inprogress:hover .inprogress_visible {
+	left: 100%;
+}
+.inprogress_hidden {
+	background-color: #df2227;
+}
+
+.good {
+	height: 64.5%;/*instead of 63*/
+}
+.good_visible {
+	left: 0;
+	transition: left 0.25s ease-in 0.1s;
+}
+.good:hover .good_visible {
+	left: 100%;
+}
+.good_hidden {
+	background-color: #c6a830;
+}
+.good_hidden a h1 {
+	color: #2c2c2e;
+}
+.good_hidden a p {
+	color: #4c4c4e;
+}
+
+.obliterary {
+	height: 100%;
+}
+.obliterary_visible {
+	top: 0;
+	transition: top 0.25s ease-in 0.1s;
+}
+.obliterary:hover .obliterary_visible {
+	top: 100%;
+}
+.obliterary_hidden {
+	background-color: #271d18;
+}
+
+
+/*Perspectives page*/
+
+	/*small screen*/
+.colc1, .colc2, .colc3 {
+	width: 100%;
+	height: 136.5vw;/*triple of laptop*/
+}
+.colc1, .colc2 {
+	margin-bottom: 1vw;
+}
+
+	/*bigger screen*/
+@media only screen and (min-aspect-ratio:16/10){
+    .colc1, .colc2, .colc3 {
+	   	float: left;
+     	height: 45.5vw;/*got value with trial and error*/
+			margin-bottom: 0;
+    }
+    .colc1 {
+      width: 33vw;
+      margin-right: 0.5vw;
+    }
+    .colc2 {
+      width: 33vw;
+      margin-right: 0.5vw;
+    }
+    .colc3 {
+      width: 33vw;
+    }
+}
+/*bigger screen*/
+
+.subcolc11, .subcolc12, .subcolc13, .subcolc21, .subcolc22, .subcolc31, .subcolc32 {
+	float: left;
+}
+
+.subcolc11 {
+	height: 34%;
+	width: 100%;
+	margin-bottom: 1.2%;
+}
+.subcolc12 {
+	height: 64.8%;
+	width: 49.5%;
+	margin-right: 1.5%;
+	margin-bottom: 0;
+}
+.subcolc13 {
+	height: 64.25%;/*unknown adjustement*/
+	width: 49%;
+	margin-bottom: 0;
+}
+.subcolc21 {
+	height: 67.4%;
+	width: 51.5%;
+	margin-right: 1.5%;
+}
+.subcolc22 {
+	height: 66.8%;/*unknown adjustement*/
+	width: 47%;
+	margin-bottom: 1.2%;
+}
+.subcolc23 {
+	height: 31.4%;
+	width: 100%;
+	margin-bottom: 0;
+}
+.subcolc31 {
+	height: 100%;
+	width: 58.5%;
+	margin-right: 1.5%;
+	margin-bottom: 0;
+}
+.subcolc32 {
+	height: 100%;/*unknown adjustement*/
+	width: 40%;
+	margin-bottom: 0;
+}
+
+.world {
+	height: 100%;
+}
+.world_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.world:hover .world_visible {
+	right: 100%;
+}
+.world_hidden {
+	background-color: #841719;
+}
+
+.growing {
+	height: 37%;
+	margin-bottom: 2%;
+}
+.growing_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.growing:hover .growing_visible {
+	right: 100%;
+}
+.growing_hidden {
+	background-color: #cf3593;
+}
+.growing_hidden a h1 {
+	color: #2c2c2e;
+}
+.growing_hidden a p {
+	color: #4c4c4e;
+}
+
+.learning {
+	height: 61%;
+	margin-bottom: 0;
+}
+.learning_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.learning:hover .learning_visible {
+	right: 100%;
+}
+.learning_hidden {
+	background-color: #3d4968;
+}
+
+.village {
+	height: 100%;
+	margin-bottom: 0;
+}
+.village img {
+	height: 100% !important;	/*unknown adjustment*/
+}
+.village_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.village:hover .village_visible {
+	right: 100%;
+}
+.village_hidden {
+	background-color: #9c3df2;
+}
+.village_hidden a h1 {
+	color: #2c2c2e;
+}
+.village_hidden a p {
+	color: #4c4c4e;
+}
+
+.journey {
+	height: 50.5%;
+	margin-bottom: 2.2%;
+}
+.journey img {
+	height: 100% !important;	/*unknown adjustment*/
+}
+.journey_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.journey:hover .journey_visible {
+	right: 100%;
+}
+.journey_hidden {
+	background-color: #111313;
+}
+
+.forests {
+	height: 47.3%;
+}
+.forests_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.forests:hover .forests_visible {
+	right: 100%;
+}
+.forests_hidden {
+	background-color: #5eae45;
+}
+.forests_hidden a h1 {
+	color: #2c2c2e;
+}
+.forests_hidden a p {
+	color: #4c4c4e;
+}
+
+.wilder {
+	height: 100%;
+}
+.wilder_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.wilder:hover .wilder_visible {
+	right: 100%;
+}
+.wilder_hidden {
+	background-color: #186d3a;
+}
+
+.resources {
+	height: 100%;
+	margin-bottom: 0;
+}
+.resources img {
+	height: 100% !important;	/*unknown adjustment*/
+}
+.resources_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.resources:hover .resources_visible {
+	right: 100%;
+}
+.resources_hidden {
+	background-color: #4c4739;
+}
+
+.love {
+	height: 61%;
+	margin-bottom: 2%;
+}
+.love img {
+	height: 100% !important;	/*unknown adjustment*/
+}
+.love_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.love:hover .love_visible {
+	right: 100%;
+}
+.love_hidden {
+	background-color: #948c89;
+}
+.love_hidden a h1 {
+	color: #2c2c2e;
+}
+.love_hidden a p {
+	color: #4c4c4e;
+}
+
+.temp {
+	height: 37.2%;
+	margin-bottom: 0;
+}
+.temp_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.temp:hover .temp_visible {
+	right: 100%;
+}
+.temp_hidden {
+	background-color: #1d1d1d;
+}
+
+.manifesto {
+	height: 61%;
+	margin-bottom: 2%;
+}
+.manifesto img {
+	height: 100% !important;	/*unknown adjustment*/
+}
+.manifesto_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.manifesto:hover .manifesto_visible {
+	right: 100%;
+}
+.manifesto_hidden {
+	background-color: #476079;
+}
+
+.solo {
+	height: 37.5%;
+	margin-bottom: 0;
+}
+.solo_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.solo:hover .solo_visible {
+	right: 100%;
+}
+.solo_hidden {
+	background-color: #152715;
+}
+
+/*Education page*/
+
+	/*small screen*/
+.cole1, .cole2, .cole3 {
+	width: 100%;
+	height: 136.5vw;/*triple of laptop*/
+}
+.cole1, .cole2 {
+	margin-bottom: 1vw;
+}
+
+	/*bigger screen*/
+@media only screen and (min-aspect-ratio:16/10){
+    .cole1, .cole2, .cole3 {
+	   	float: left;
+     	height: 45.5vw;/*got value with trial and error*/
+			margin-bottom: 0;
+    }
+    .cole1 {
+      width: 33vw;
+      margin-right: 0.5vw;
+    }
+    .cole2 {
+      width: 33vw;
+      margin-right: 0.5vw;
+    }
+    .cole3 {
+      width: 33vw;
+    }
+}
+/*bigger screen*/
+
+.subcole11, .subcole12, .subcole13, .subcole14, .subcole21, .subcole22, .subcole23, .subcole31, .subcole32, .subcole33 {
+	float: left;
+}
+
+.subcole11 {
+	height: 37%;
+	width: 36%;
+	margin-right: 1.5%;
+}
+.subcole12 {
+	height: 37%;
+	width: 62.5%;
+	margin-bottom: 1.2%;
+}
+.subcole13 {
+	height: 61.8%;
+	width: 51.5%;
+	margin-right: 1.5%;
+}
+.subcole14 {
+	height: 61.8%;/*unknown adjustement*/
+	width: 47%;
+}
+.subcole21 {
+	height: 67.8%;
+	width: 100%;
+	margin-bottom: 1.2%;
+}
+.subcole22 {
+	height: 31%;
+	width: 41.5%;
+	margin-right: 1.5%;
+}
+.subcole23 {
+	height: 31%;
+	width: 57%;
+}
+.subcole31 {
+	height: 31%;
+	width: 100%;
+	margin-bottom: 1.2%;
+}
+.subcole32 {
+	height: 67.8%;
+	width: 49%;
+	margin-right: 1.5%;
+}
+.subcole33 {
+	height: 68.5%; /*unknown  nesting adjustment*/
+	width: 48.5%;
+}
+
+.ideab {
+	height: 100%;
+}
+.ideab img {
+	height: 100% !important;	/*adjustment*/
+}
+.ideab_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.ideab_hidden {
+	background-color: #e9b120;
+}
+
+.methods {
+	height: 100%;
+}
+.methods img {
+	height: 100% !important;	/*adjustment*/
+}
+.methods_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.methods_hidden {
+	background-color: #139098;
+}
+
+.jmap {
+	height: 100%;
+}
+.jmap img {
+	height: 100% !important;	/*adjustment*/
+}
+.jmap_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.jmap_hidden {
+	background-color: #09754f;
+}
+
+.themes {
+	height: 100%;
+}
+.themes img {
+	height: 100% !important;	/*adjustment*/
+}
+.themes_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.themes_hidden {
+	background-color: #413833;
+}
+
+.inspiration {
+	height: 100%;
+}
+.inspiration img {
+	height: 100% !important;	/*adjustment*/
+}
+.inspiration_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.inspiration_hidden {
+	background-color: #e9b120;
+}
+
+.play {
+	height: 100%;
+}
+.play img {
+	height: 100% !important;	/*adjustment*/
+}
+.play_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.play_hidden {
+	background-color: #e54e40;
+}
+
+.exed {
+	height: 100%;
+}
+.exed_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.exed_hidden {
+	background-color: #09754f;
+}
+
+.prowork {
+	height: 100%;
+}
+.prowork_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.prowork_hidden {
+	background-color: #139098;
+}
+
+.headhhf {
+	height: 100%;
+}
+.headhhf img {
+	height: 100% !important;	/*adjustment*/
+}
+.headhhf_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.headhhf_hidden {
+	background-color: #413833;
+}
+
+.plusone {
+	height: 49%;
+	margin-bottom: 2%;
+}
+.plusone img {
+	height: 100% !important;	/*adjustment*/
+}
+.plusone_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.plusone_hidden {
+	background-color: #e9b120;
+}
+
+.edresources {
+	height: 49%;
+}
+.edresources img {
+	height: 100% !important;	/*adjustment*/
+}
+.edresources_visible {
+	right: 0;
+	transition: right 0.25s ease-in 0.1s;
+}
+.edresources_hidden {
+	background-color: #e9b120;
+}
