@@ -13,6 +13,8 @@ window.onload = function() {
 
 //enabling js after page loads
 $(document).ready(function() {
+  //check scrollbar width and if non-zero(old firefox) adjust col3
+  if(window.innerWidth-$(window).width()>0){ adjustWidth(); }
   //activate dropdown button
   dropdown_toggle();
 //page loading sequence 1: right after dom loads
@@ -290,4 +292,30 @@ $(document).ready(function() {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  //function for adjusting width
+  function adjustWidth() {
+    var swidth=(window.innerWidth-$(window).width());
+    var cwidth1 = 33.5*window.innerWidth/100;//illustration page
+    var cwidth2 = 33*window.innerWidth/100;//other 3 pages
+    //alert('col width is: '+cwidth);
+    cwidth1 = cwidth1 - swidth;
+    cwidth2 = cwidth2 - swidth;
+    $(".col3").css('width', cwidth1.toString()+'px');
+    $(".colp3").css('width', cwidth2.toString()+'px');
+    $(".cole3").css('width', cwidth2.toString()+'px');
+    $(".colc3").css('width', cwidth2.toString()+'px');
+    //watch out for window resizes and recalculate everytime
+    $(window).resize(function(){
+        var swidth=(window.innerWidth-$(window).width());
+        var cwidth1 = 33.5*window.innerWidth/100;
+        var cwidth2 = 33*window.innerWidth/100;
+        cwidth1 = cwidth1 - swidth;
+        cwidth2 = cwidth2 - swidth;
+        $(".col3").css('width', cwidth1.toString()+'px');
+        $(".colp3").css('width', cwidth2.toString()+'px');
+        $(".cole3").css('width', cwidth2.toString()+'px');
+        $(".colc3").css('width', cwidth2.toString()+'px');
+    });
   }
