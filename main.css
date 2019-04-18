@@ -443,6 +443,14 @@ section {
 .heading p {
 	text-align: center;
 }
+.heading img {
+	display: none;
+	position: fixed;
+	top: 8vh;
+	left: 49vw;
+	height: 2.5vh;
+	width: auto;
+}
 .dropdown {
 	position: fixed;
 	width: 25vw;
@@ -508,6 +516,20 @@ section {
 		height: 6.66vh;
 		width: auto;
 	  padding: 1.4vh 3vh 0;
+	}
+	.pc-header .exit-project {
+		display: none;
+		cursor: pointer;
+		position: fixed;
+		height: 5vh;
+		width: auto;
+		top: 2vh;
+	}
+	.pc-header .exit-project:first-of-type {
+		left: 15vw;
+	}
+	.pc-header .exit-project:last-of-type {
+		right: 15vw;
 	}
 	nav {
 	  display: inline-block;
