@@ -523,7 +523,7 @@ section {
 		position: fixed;
 		height: 5vh;
 		width: auto;
-		top: 2vh;
+		top: 1.5vh;
 	}
 	.pc-header .exit-project:first-of-type {
 		left: 15vw;
