@@ -55,6 +55,9 @@ html {
 ::-webkit-scrollbar {
 	display: none;
 }
+::-moz-scrollbar {
+	display: none;
+}
 body {
   background-color: white;
 }
@@ -407,7 +410,7 @@ section {
 	display: block !important;
 }
 .mobile-header {
-	height: 6.16vh;
+	height: 10.16vh;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -415,23 +418,24 @@ section {
 }
 .mlogo {
 	position: fixed;
-	left: 0;
-	width: 13vw;
-	padding: 1.2vh 1vh 0;
+	top: 2vh;
+	left: 1vh;
+	height: 7vh;
+	width: auto;
 }
 .mlogo img{
-	height: 5vh;
+	height: 100%;
 	width: auto;
 }
 .heading {
 	width: 50vw;
 	position: fixed;
 	left: 25vw;
-	top: 3vh;
+	top: 5vh;
 	text-align: center;
 	text-decoration: none;
 	font-family: "Montserrat";
-	font-weight: 600;
+	font-weight: 700;
 	letter-spacing: 1vw;
 	font-size: 4vw;
 	color: white;
@@ -442,20 +446,22 @@ section {
 .dropdown {
 	position: fixed;
 	width: 25vw;
+	height: 11vh;
+	top: 0;
 	right: 0;
 }
 .dropdown-button {
 	position: fixed;
+	top: 1.5vh;
 	right: 0;
-	padding: 0.5vh;
 }
 .dropdown-button img {
-	width: 13vw;
-	height: auto;
+	width: auto;
+	height: 9vh;
 }
 .dropdown-content {
 	position: fixed;
-	top: 7.16vh;
+	top: 11.16vh;
 	right: 0;
 	width: 50vw;
 	display: none;
@@ -473,6 +479,9 @@ section {
 	letter-spacing: 0.5vw;
 	font-size: 4.5vw;
   color: black;
+}
+.dropdown-content ul li a {
+	line-height: 8vw;
 }
 
 /*bigger screen nav*/
@@ -547,7 +556,7 @@ section {
 	.home-page {
 		margin: 0;
 		position: relative;
-		top: 7.56vh;
+		top: 11.56vh;
 		width: 100%;
 		height: auto;
 		padding: 0.5vh 0 0;
@@ -720,7 +729,7 @@ section {
 		height: auto;
 		width: 100%;
 		position: relative;
-		top: 7.56vh;
+		top: 11.56vh;
 		left: 0;
 		z-index: 0;
 	}
@@ -740,7 +749,7 @@ section {
 	margin: 0;
 	display: none;
 	position: relative;
-	top: 7.56vh;
+	top: 11.56vh;
 	left: 0;
 	z-index: 1;
 	height: auto;
