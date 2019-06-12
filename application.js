@@ -208,7 +208,6 @@ $(document).ready(function() {
         $('.image-grid').css('pointer-events','auto');
         $(document).scrollTop(0);
         project_view=false;
-        $('.exit-project').css('display','none');
         //update url
         window.history.pushState('','',window.location.href.substring(0, window.location.href.indexOf("?")));
       }
@@ -230,7 +229,6 @@ $(document).ready(function() {
         $('.image-grid').css('pointer-events','auto');
         $(document).scrollTop(0);
         project_view=false;
-        $('.exit-project').css('display','none');
         //update url
         window.history.pushState('','',window.location.href.substring(0, window.location.href.indexOf("?")));
       }
@@ -273,8 +271,7 @@ $(document).ready(function() {
     $.ajax({ url: 'projects/'+project_name+'.html',
             success: function(result) {
               $('.project-page').html(result);
-              project_view=true;
-              $('.exit-project').fadeIn(500);
+              project_view=true;              
             },
             error: function(request, errorType, errorMessage){
               alert('Error: '+errorType+', with message:'+errorMessage);

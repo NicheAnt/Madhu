@@ -517,20 +517,6 @@ section {
 		width: auto;
 	  padding: 1.4vh 3vh 0;
 	}
-	.pc-header .exit-project {
-		display: none;
-		cursor: pointer;
-		position: fixed;
-		height: 5vh;
-		width: auto;
-		top: 1.5vh;
-	}
-	.pc-header .exit-project:first-of-type {
-		left: 15vw;
-	}
-	.pc-header .exit-project:last-of-type {
-		right: 15vw;
-	}
 	nav {
 	  display: inline-block;
 	  position: relative;
@@ -807,6 +793,9 @@ section {
 	}
 }
 
+.home-page a {
+	color: black;
+}
 .image-grid a {
 	display: block;
 	height: 100%; /* to make the full container a link */
