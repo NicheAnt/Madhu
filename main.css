@@ -357,8 +357,9 @@ section {
 	height: auto;
 	width: 100%;
 }
-.project-body .invisible {
-	visibility: hidden;
+.project-body .lazy {
+	opacity: 0;
+	transition: opacity 1s ease-out;
 }
 .loader {
 	position: absolute;

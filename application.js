@@ -12,7 +12,7 @@ window.onload = function() {
 };
 
 //enabling js after page loads
-$(document).ready(function() {
+$(document).ready(function() {  
   //check scrollbar width and if non-zero(old firefox) adjust col3
   if(window.innerWidth-$(window).width()>0){ adjustWidth(); }
   //activate dropdown button
@@ -26,7 +26,7 @@ $(document).ready(function() {
     $(".green").css('visibility','visible');
   }, 500);
 
-//loading sequence 2: as each image loads
+//loading sequence 2: as each image loads in the grid
   var imgDefer = document.getElementsByClassName('visible');
   for (var i=0; i<imgDefer.length; i++) {
     //check if it's already in cache
@@ -271,7 +271,7 @@ $(document).ready(function() {
     $.ajax({ url: 'projects/'+project_name+'.html',
             success: function(result) {
               $('.project-page').html(result);
-              project_view=true;              
+              project_view=true;
             },
             error: function(request, errorType, errorMessage){
               alert('Error: '+errorType+', with message:'+errorMessage);
