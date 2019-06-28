@@ -1,31 +1,32 @@
-
 $(document).ready(function() {//enabling js after page loads
-  //loading sequence... slight delay for font
-  //$(".loader").delay(1000).css('visibility','visible');
-  //loading animation for each image tagged as invisible
-  var y = document.getElementsByClassName("invisible");
-  //alert(y.length+' number of images in this project');
-  for (var i=0; i<y.length; i++) {
-    if (y[i].complete){//check if it's already in cache
-      $(y[i]).css('visibility','visible');
-      $(y[i]).siblings(".loader").css("display", "none");
-      $(y[i]).parent("figure").css("background-color", "white");
-    }
-    else {
-      $(y[i]).on('load', function(){
-        $(y[i]).css('visibility','visible');
-        $(y[i]).siblings(".loader").css("display", "none");
-        $(y[i]).parent("figure").css("background-color", "white");
-      });
-    }
+
+//lazy-loading for each image tagged as lazy
+  // Get all of the images that are marked up to lazy load (vanilla JS)
+  const images = document.querySelectorAll('.lazy');
+  const config = {
+    rootMargin: '50px 0px',// If the image gets within 50px in the Y axis, start the download.
+    threshold: 0.01
+  };
+  // The observer for the images on the page
+  let observer = new IntersectionObserver(onIntersection, config);
+  //if browser doesn't support, load all lazy content after a 5s timeout
+  if (!('IntersectionObserver' in window))
+  {
+    var imgs = document.getElementsByClassName('lazy');
+    $(".loader").fadeOut(6000);
+    setTimeout(function(){
+      for (var i=0; i<imgs.length; i++) {
+        $(imgs[i]).attr('src', $(imgs[i]).attr('data-src'));
+        $(imgs[i]).css('opacity','1');
+      }
+    }, 5000);
   }
-  //load all invisible content after timeout anyway
-  setTimeout(function(){
-    $(".invisible").css('visibility','visible');
-    $(".loader").css("display", "none");
-    $(".invisible").parent("figure").css("background-color", "white");
-  }, 5000);
-  //activate toggles
+  //initiate observer for each image
+  images.forEach(image => {
+    observer.observe(image);
+  });
+
+//activate toggles
   imdropdown_toggle();
   caption_toggle();
 });//end of document-ready code
@@ -39,11 +40,17 @@ $(document).ready(function() {//enabling js after page loads
         $('.hidden-1').css('display','block');
         $('.hidden-2').css('display','none');
         event.preventDefault();
+        $('html, body').animate({
+          scrollTop: ($('.link-1').offset().top)
+        },500);
       });
     $('.project-body').on('mousedown', '.link-2', function(event) {
         $('.hidden-1').css('display','none');
         $('.hidden-2').css('display','block');
         event.preventDefault();
+        $('html, body').animate({
+          scrollTop: ($('.link-2').offset().top)
+        },500);
       });
       //back to top...
     $('.project-body').on('click', '.link-close', function(event) {
@@ -61,3 +68,27 @@ $(document).ready(function() {//enabling js after page loads
         event.preventDefault();
       });
   }//caption toggle function end
+
+  //for (lazy) loading image that has come into viewport
+  function onIntersection(entries) {
+    // Loop through the entries
+    entries.forEach(entry => {
+      // Are we in viewport?
+      if (entry.intersectionRatio > 0) {
+        $(entry.target).attr('src', $(entry.target).attr('data-src'));
+        //On load, ease-in the image, fade-out the loading animation
+        if (entry.target.complete){//already cached
+          $(entry.target).siblings(".loader").fadeOut(500);
+          $(entry.target).css('opacity','1');
+        }
+        else {
+          $(entry.target).on('load', function(){//fresh load
+            $(entry.target).siblings(".loader").fadeOut(500);
+            $(entry.target).css('opacity','1');
+          });
+        }
+        //Stop watching this image
+        observer.unobserve(entry.target);
+      }
+    });
+  }
